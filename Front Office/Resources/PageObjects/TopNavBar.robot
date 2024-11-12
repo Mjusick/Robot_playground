@@ -1,8 +1,10 @@
 *** Settings ***
 Library    SeleniumLibrary
 
+*** Variables ***
+${TEAM_BUTTON}=    //a[text()= 'Team']
 
 *** Keywords ***
 Go to Team Page
-    Click Element    //a[text()= 'Team']
+    Click Element    ${TEAM_BUTTON}
     Sleep    5s
