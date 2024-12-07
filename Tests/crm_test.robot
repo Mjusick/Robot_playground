@@ -1,9 +1,9 @@
 *** Settings ***
 Documentation    This is some basic docs about test suite
-Resource    CRM/Resources/crm_app.robot
-Resource    CRM/Resources/common.robot
-Resource    CRM/Resources/input_data.robot
-Resource    CRM/Resources/DataManager.robot
+Resource    Resources/crm_app.robot
+Resource    Resources/common.robot
+Resource    Resources/input_data.robot
+Resource    Resources/DataManager.robot
 
 Test Setup    Begin Test
 Test Teardown    End Test

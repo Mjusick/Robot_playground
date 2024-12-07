@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Use these keywords to get data from files
-Library    CRM/CustomLibraries/csv_reader.py
+Library    CustomLibraries/csv_reader.py
 
 
 *** Keywords ***

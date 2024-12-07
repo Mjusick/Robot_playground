@@ -1,9 +1,9 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    CRM/Resources/PageObjects/HomePage.robot
-Resource    CRM/Resources/PageObjects/SignInPage.robot
-Resource    CRM/Resources/PageObjects/CustomersPage.robot
-Resource    CRM/Resources/PageObjects/TopNavBar.robot
+Resource    Resources/PageObjects/HomePage.robot
+Resource    Resources/PageObjects/SignInPage.robot
+Resource    Resources/PageObjects/CustomersPage.robot
+Resource    Resources/PageObjects/TopNavBar.robot
 
 *** Keywords ***
 

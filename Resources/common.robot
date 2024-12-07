@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    CRM/Resources/input_data.robot
+Resource    Resources/input_data.robot
 
 *** Keywords ***
 Begin Test
