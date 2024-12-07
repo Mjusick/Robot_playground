@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${SIGN_OUT_LINK}=    Sign Out
+${SIGN_OUT_LINK}    Sign Out
 
 *** Keywords ***
 Click "Sign out" link

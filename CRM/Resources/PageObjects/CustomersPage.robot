@@ -2,22 +2,26 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${ADD_CUSTOMER_LINK}=     id=new-customer
-${EMAIL_INPUT_FIELD}=    id=EmailAddress
-${FIRST_NAME_INPUT_FIELD}=    id=FirstName
-${LAST_NAME_INPUT_FIELD}=    id=LastName
-${CITY_INPUT_FIELD}=    id=City
-${STATE_REGION_LIST}=    id=StateOrRegion
-${GENDER_RADIO_BUTTON}=    gender
-${SUBMIT_BUTTON}=    Submit
+${ADD_CUSTOMER_LINK}     id=new-customer
+${EMAIL_INPUT_FIELD}    id=EmailAddress
+${FIRST_NAME_INPUT_FIELD}    id=FirstName
+${LAST_NAME_INPUT_FIELD}    id=LastName
+${CITY_INPUT_FIELD}    id=City
+${STATE_REGION_LIST}    id=StateOrRegion
+${GENDER_RADIO_BUTTON}    gender
+${SUBMIT_BUTTON}    Submit
+${CHECKBOX}    name=promos-name
+${PAGE_HEADER}    "Our Happy Customers"
+${ADDED_CUSTOMER_BANNER}    Success! New customer added.
+${ADD_NEW_CUSTOMER_BANNER}    Add Customer
 
 *** Keywords ***
 Verify Page Loaded
-    Wait Until Page Contains    "Our Happy Customers"
+    Wait Until Page Contains    ${PAGE_HEADER}
 
 Go to "add new customer" page
     Click Link    ${ADD_CUSTOMER_LINK}
-    Wait Until Page Contains    Add Customer
+    Wait Until Page Contains    ${ADD_NEW_CUSTOMER_BANNER}
 
 Fill in form with new customer details
     [Arguments]    ${NEW_CUSTOMER}
@@ -27,11 +31,11 @@ Fill in form with new customer details
     Fill in "City" field    ${NEW_CUSTOMER.city}
     Select state from list    ${NEW_CUSTOMER.state}
     Select gender    ${NEW_CUSTOMER.gender}
-    Select Checkbox    name=promos-name
+    Select Checkbox    ${CHECKBOX}
 
 Submit new customer form
     Click Button    ${SUBMIT_BUTTON}
-    Wait Until Page Contains    Success! New customer added.
+    Wait Until Page Contains    ${ADDED_CUSTOMER_BANNER}
     
 Fill in "Email" field
     [Arguments]    ${EMAIL}
